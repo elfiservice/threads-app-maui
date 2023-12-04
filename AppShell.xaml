@@ -8,8 +8,19 @@
     Title="ThreadsApp">
 
     <ShellContent
-        Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="HomePage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="SearchPage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="NewThreadPage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="ActivityPage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="ProfilePage" />
 
 </Shell>
