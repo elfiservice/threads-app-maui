@@ -1,4 +1,4 @@
-namespace MauiApp1;
+namespace ThreadsApp.Pages;
 
 public class ActivityPage : ContentPage
 {
@@ -7,7 +7,7 @@ public class ActivityPage : ContentPage
 		Content = new VerticalStackLayout
 		{
 			Children = {
-				new Label { HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, Text = "Welcome to .NET MAUI!"
+				new Label { HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, Text = "Welcome to Activity Pg!"
 				}
 			}
 		};
