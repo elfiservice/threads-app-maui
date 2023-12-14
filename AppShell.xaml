@@ -39,7 +39,7 @@
 
         <Tab Title="New">
             <Tab.Icon>
-                <FontImageSource FontFamily="FAS"
+                <FontImageSource FontFamily="FAR"
                             Color="{AppThemeBinding 
                                     Dark=White, 
                                     Light={StaticResource SystemGray5Dark}}"
@@ -52,7 +52,7 @@
 
         <Tab Title="Activity">
             <Tab.Icon>
-                <FontImageSource FontFamily="FAS"
+                <FontImageSource FontFamily="FAR"
                             Color="{AppThemeBinding 
                                     Dark=White, 
                                     Light={StaticResource SystemGray5Dark}}"
@@ -66,7 +66,7 @@
 
         <Tab Title="Profile">
             <Tab.Icon>
-                <FontImageSource FontFamily="FAS"
+                <FontImageSource FontFamily="FAR"
                             Color="{AppThemeBinding 
                                     Dark=White, 
                                     Light={StaticResource SystemGray5Dark}}"
