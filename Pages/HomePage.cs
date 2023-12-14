@@ -70,6 +70,8 @@ public partial class HomePage : ContentPage
 
 	public class ThreadCell : ViewCell
 	{
+		const int iconSize = 20;
+
 		public ThreadCell()
 		{
             View = new Grid
@@ -78,7 +80,7 @@ public partial class HomePage : ContentPage
 				ColumnDefinitions = Columns.Define(Auto, Star, Auto, Auto),
 				ColumnSpacing = 10,
 				RowSpacing = 5,
-				RowDefinitions = Rows.Define(Auto, Star, Auto, Auto),
+				RowDefinitions = Rows.Define(Auto, Auto, Auto, Auto),
 				Children =
 				{
 
@@ -122,19 +124,19 @@ public partial class HomePage : ContentPage
 						new Label()
 						.Text(FontAwesomeIcons.Heart)
 						.Font("FAS")
-						.FontSize(15),
+						.FontSize(iconSize),
 						new Label()
 						.Text(FontAwesomeIcons.Comment)
 						.Font("FAS")
-						.FontSize(15),
+						.FontSize(iconSize),
 						new Label()
 						.Text(FontAwesomeIcons.Retweet)
 						.Font("FAS")
-						.FontSize(15),
+						.FontSize(iconSize),
 						new Label()
 						.Text(FontAwesomeIcons.PaperPlane)
 						.Font("FAS")
-						.FontSize(15)
+						.FontSize(iconSize)
 					}.Row(2).Column(1),
 					new HorizontalStackLayoutSpaced
 					{
