@@ -93,9 +93,7 @@ public partial class HomePage : ContentPage
 							.Bind(Label.TextProperty, nameof(AThread.User))
 							.Bold()
 							.Bottom(),
-						new Label()
-							.Text(FontAwesomeIcons.CircleCheck)
-							.Font("FAS")
+						new FontAwesomeLabel(FontAwesomeStyle.Solid, FontAwesomeIcons.CircleCheck)
 							.TextColor(Colors.Blue)
 							.Bind(Label.IsVisibleProperty, nameof(AThread.IsVerified))
 							.Bottom()
@@ -104,9 +102,7 @@ public partial class HomePage : ContentPage
 						.Bind(Label.TextProperty, nameof(AThread.TimeAgo))
 						.Row(0).Column(2)
 						.Bottom(),
-					new Label()
-						.Text(FontAwesomeIcons.Ellipsis)
-						.Font("FAS")
+					new FontAwesomeLabel(FontAwesomeStyle.Solid, FontAwesomeIcons.Ellipsis)
 						.Row(0).Column(3)
 						.Bottom(),
 					new Label()
@@ -115,22 +111,14 @@ public partial class HomePage : ContentPage
 						.ColumnSpan(3),
 					new HorizontalStackLayoutSpaced()
 					{
-						new Label()
-						.Text(FontAwesomeIcons.Heart)
-						.Font("FAR")
-						.FontSize(iconSize),
-						new Label()
-						.Text(FontAwesomeIcons.Comment)
-						.Font("FAR")
-						.FontSize(iconSize),
-						new Label()
-						.Text(FontAwesomeIcons.Retweet)
-						.Font("FAS")
-						.FontSize(iconSize),
-						new Label()
-						.Text(FontAwesomeIcons.PaperPlane)
-						.Font("FAR")
-						.FontSize(iconSize)
+						new FontAwesomeLabel(FontAwesomeStyle.Regular, FontAwesomeIcons.Heart)
+							.FontSize(iconSize),
+						new FontAwesomeLabel(FontAwesomeStyle.Regular, FontAwesomeIcons.Comment)
+							.FontSize(iconSize),
+						new FontAwesomeLabel(FontAwesomeStyle.Solid, FontAwesomeIcons.Retweet)
+							.FontSize(iconSize),
+						new FontAwesomeLabel(FontAwesomeStyle.Regular, FontAwesomeIcons.PaperPlane)
+							.FontSize(iconSize)
 					}.Row(2).Column(1),
 					new HorizontalStackLayoutSpaced
 					{
