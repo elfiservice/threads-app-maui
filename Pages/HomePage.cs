@@ -1,9 +1,9 @@
 namespace ThreadsApp.Pages;
 using ThreadsApp.Helpers;
 using CommunityToolkit.Maui.Markup;
-using CommunityToolkit.Mvvm.ComponentModel;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 using ThreadsApp.Controls;
+using ThreadsApp.Models;
 
 // https://github.com/elfiservice/ThreadsApp-study/commit/0d9821a8eeb4f8b796e345cd2665ad643ea574ab
 public partial class HomePage : ContentPage
@@ -37,30 +37,6 @@ public partial class HomePage : ContentPage
 
 		Content = listView;
 	}
-
-	public partial class AThread : ObservableObject
-	{
-		[ObservableProperty]
-		string user;
-		[ObservableProperty]
-		string image;
-		[ObservableProperty]
-		string message;
-		[ObservableProperty]
-		[NotifyPropertyChangedFor(nameof(HasLikes))]
-		int likes;
-		[ObservableProperty]
-		[NotifyPropertyChangedFor(nameof(HasReplies))]
-		int replies;
-		[ObservableProperty]
-		bool isVerified;
-		[ObservableProperty]
-		string timeAgo;
-
-		public bool HasReplies => Replies > 0;
-		public bool HasLikes => Likes > 0;
-	}
-
 
 	public class ThreadCell : ViewCell
 	{
