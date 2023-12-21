@@ -64,9 +64,4 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Controls/" />
-	  <Folder Include="Pages/" />
-	</ItemGroup>
-
 </Project>
