@@ -25,4 +25,39 @@ public static class ThreadsGenerator
 			};
     
     }
+
+    public static AUser CreateUser(bool isVerified = false, bool isFollowing = false)
+    {
+        return new AUser
+        {
+            UserName = "jamesmontemagno",
+            DisplayName = "James Montemagno",
+            IsVerified = isVerified,
+            IsFollowing = isFollowing,
+            Image = "profilecircle.png",
+            FollowerCount = 1500
+        };
+    }
+
+	public static IEnumerable CreateUsers()
+    {
+        return new[]
+        {
+            CreateUser(false, true),
+            new AUser
+            {
+                UserName = "shanselman",
+                DisplayName = "Scott Hanselman",
+                IsVerified = true,
+                IsFollowing = false,
+                HasSimilarFollowers = true,
+                Image = "profilecircle.png",
+                FollowerCount = 1500000
+            },
+            CreateUser(true, false),
+            CreateUser(true, true),
+            CreateUser(),
+            CreateUser()
+        };
+    }
 }
