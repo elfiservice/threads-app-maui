@@ -25,7 +25,7 @@ public class ThreadView : Grid
         RowSpacing = 5;
         RowDefinitions = Rows.Define(Auto, Auto, Auto, Auto);
         Children.Add(new Image()
-            .Bind(Image.SourceProperty, nameof(AThread.Image))
+            .Bind(Image.SourceProperty, nameof(AThread.User.Image))
             .Width(35).Height(35)
             .Row(0).Column(0)
             .RowSpan(2)
@@ -42,7 +42,7 @@ public class ThreadView : Grid
                     .Bottom(),
                 new FontAwesomeLabel(FontAwesomeStyle.Solid, FontAwesomeIcons.CircleCheck)
                     .TextColor(Colors.Blue)
-                    .Bind(Label.IsVisibleProperty, nameof(AThread.IsVerified))
+                    .Bind(Label.IsVisibleProperty, nameof(AThread.User.IsVerified))
                     .Bottom()
             }.Row(0).Column(1));
 

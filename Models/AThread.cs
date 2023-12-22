@@ -4,19 +4,19 @@ using CommunityToolkit.Mvvm.ComponentModel;
 	public partial class AThread : ObservableObject
 	{
 		[ObservableProperty]
-		string user;
-		[ObservableProperty]
-		string image;
+		AUser user;
+
 		[ObservableProperty]
 		string message;
+
 		[ObservableProperty]
 		[NotifyPropertyChangedFor(nameof(HasLikes))]
 		int likes;
+
 		[ObservableProperty]
 		[NotifyPropertyChangedFor(nameof(HasReplies))]
 		int replies;
-		[ObservableProperty]
-		bool isVerified;
+
 		[ObservableProperty]
 		string timeAgo;
 
