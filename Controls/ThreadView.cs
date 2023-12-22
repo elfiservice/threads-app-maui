@@ -34,17 +34,7 @@ public class ThreadView : Grid
             .Margin(new Thickness(0, 5, 0, 0))
             .Aspect(Aspect.AspectFill));
         
-		Children.Add(new HorizontalStackLayoutSpaced(5)
-            {
-                new Label()
-                    .Bind(Label.TextProperty, nameof(AThread.User))
-                    .Bold()
-                    .Bottom(),
-                new FontAwesomeLabel(FontAwesomeStyle.Solid, FontAwesomeIcons.CircleCheck)
-                    .TextColor(Colors.Blue)
-                    .Bind(Label.IsVisibleProperty, nameof(AThread.User.IsVerified))
-                    .Bottom()
-            }.Row(0).Column(1));
+		Children.Add(new UserView($"{nameof(AThread.User)}.").Row(0).Column(1));
 
 		Children.Add(new Label()
             .Bind(Label.TextProperty, nameof(AThread.TimeAgo))

@@ -47,7 +47,7 @@ public class SearchPage : BasePage
                 return;
 
             followButton
-            .Text(user.IsFollowing ? "Unfollow" : "Follow");
+                .Text(user.IsFollowing ? "Unfollow" : "Follow");
         }
         public UserViewCell()
         {
