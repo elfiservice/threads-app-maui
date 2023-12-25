@@ -98,8 +98,8 @@ public class SearchPage : BasePage
                         .Width(12).Height(12)
                         .CenterHorizontal()
                         .Bind(Image.IsVisibleProperty, nameof(AUser.HasSimilarFollowers)),
-                        // new Label()
-                        //     .Bind(Label.TextProperty, nameof(AUser.FollowersDisplay))
+                        new Label()
+                            .Bind(Label.TextProperty, nameof(AUser.FollowersDisplay))
 
                     }.Column(1)
                     .Row(2),

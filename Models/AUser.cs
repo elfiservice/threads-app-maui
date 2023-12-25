@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Humanizer;
 // using Humanizer;
 
 namespace ThreadsApp.Models;
@@ -26,5 +27,5 @@ public partial class AUser : ObservableObject
     [ObservableProperty]
     bool hasSimilarFollowers;
 
-    // public string FollowersDisplay => $"{FollowerCount.ToMetric().ToUpper()} followers";
+    public string FollowersDisplay => $"{FollowerCount.ToMetric().ToUpper()} followers";
 }
