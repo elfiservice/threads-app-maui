@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using ThreadsApp.Models;
+using ThreadsApp.CoreBusiness;
 
 namespace ThreadsApp.Helpers;
 

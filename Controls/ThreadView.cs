@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui.Markup;
 using ThreadsApp.Helpers;
-using ThreadsApp.Models;
+using ThreadsApp.CoreBusiness;
+// using ThreadsApp.Models;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
 namespace ThreadsApp.Controls;

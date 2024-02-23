@@ -2,7 +2,7 @@ using ThreadsApp.Helpers;
 using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 using ListView = Microsoft.Maui.Controls.ListView;
-using ThreadsApp.Models;
+using ThreadsApp.CoreBusiness;
 using CommunityToolkit.Maui.Markup;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 using ThreadsApp.Controls;

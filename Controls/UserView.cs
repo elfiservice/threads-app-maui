@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Maui.Markup;
 using ThreadsApp.Helpers;
-using ThreadsApp.Models;
+using ThreadsApp.CoreBusiness;
 
 namespace ThreadsApp.Controls;
 
