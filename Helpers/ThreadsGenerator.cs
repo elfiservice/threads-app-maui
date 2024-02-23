@@ -2,7 +2,8 @@
 using ThreadsApp.CoreBusiness;
 
 namespace ThreadsApp.Helpers;
-
+// TODO move this to a Repository in a Plugin Layer 
+// TODO creating the UserCases to CreateThreads and CreateUsers
 public static class ThreadsGenerator
 {
     public static IEnumerable CreateThreads() {
@@ -24,7 +25,7 @@ public static class ThreadsGenerator
     
     }
 
-    public static AUser CreateUser(bool isVerified = false, bool isFollowing = false)
+    private static AUser CreateUser(bool isVerified = false, bool isFollowing = false)
     {
         return new AUser
         {
