@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui.Markup;
 using Microsoft.Extensions.Logging;
+using ThreadsApp.Pages;
 using ThreadsApp.Plugins.DataStore.InMemory;
 using ThreadsApp.UseCases;
 
@@ -31,6 +32,8 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<IViewThreadsUseCase, ViewThreadsUseCase>();
 		builder.Services.AddSingleton<IViewUsersUseCase, ViewUsersUseCase>();
+
+		builder.Services.AddSingleton<HomePage>();
 
 
 		return builder.Build();
