@@ -23,7 +23,7 @@ public partial class HomePage : BasePage
 			ItemTemplate = new DataTemplate(typeof(ThreadCell)),
 			IsPullToRefreshEnabled = true,
 
-			ItemsSource = ThreadsGenerator.CreateThreads()
+			ItemsSource = this.viewThreadsUseCase.ExecuteAsync().Result
 		};
 
 		Content = listView;
