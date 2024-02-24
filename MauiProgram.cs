@@ -34,6 +34,7 @@ public static class MauiProgram
 		builder.Services.AddSingleton<IViewUsersUseCase, ViewUsersUseCase>();
 
 		builder.Services.AddSingleton<HomePage>();
+		builder.Services.AddSingleton<SearchPage>();
 
 
 		return builder.Build();

@@ -6,13 +6,18 @@ using ThreadsApp.CoreBusiness;
 using CommunityToolkit.Maui.Markup;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 using ThreadsApp.Controls;
+using ThreadsApp.UseCases;
 
 namespace ThreadsApp.Pages;
 
 public class SearchPage : BasePage
 {
-	public SearchPage()
+    private readonly IViewUsersUseCase viewUsersUseCase;
+
+    public SearchPage(IViewUsersUseCase viewUsersUseCase)
 	{
+        this.viewUsersUseCase = viewUsersUseCase;
+
         Shell.SetSearchHandler(this, new SearchHandler
         {
             Placeholder = "Search",
@@ -31,7 +36,7 @@ public class SearchPage : BasePage
         var listView = new ListView(ListViewCachingStrategy.RecycleElement);
         listView.HasUnevenRows = true;
         listView.SelectionMode = ListViewSelectionMode.None;
-        listView.ItemsSource = ThreadsGenerator.CreateUsers();
+        listView.ItemsSource = this.viewUsersUseCase.ExecuteAsync().Result;
         listView.ItemTemplate = new DataTemplate(typeof(UserViewCell));
 
         Content = listView;
