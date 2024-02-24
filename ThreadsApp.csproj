@@ -67,6 +67,8 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\ThreadsApp.CoreBusiness\ThreadsApp.CoreBusiness.csproj" />
+	  <ProjectReference Include="..\Plugins\ThreadsApp.Plugins.DataStore.InMemory\ThreadsApp.Plugins.DataStore.InMemory.csproj" />
+	  <ProjectReference Include="..\ThreadsApp.UseCases\ThreadsApp.UseCases.csproj" />
 	</ItemGroup>
 
 </Project>

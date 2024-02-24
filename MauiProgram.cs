@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Maui.Markup;
 using Microsoft.Extensions.Logging;
+using ThreadsApp.Plugins.DataStore.InMemory;
+using ThreadsApp.UseCases;
 
 namespace ThreadsApp;
 
@@ -23,6 +25,13 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+
+		builder.Services.AddSingleton<IThreadRepository, ThreadsInMemoryRepository>();
+		builder.Services.AddSingleton<IUserRepository, UsersInMemoryRepository>();
+
+		builder.Services.AddSingleton<IViewThreadsUseCase, ViewThreadsUseCase>();
+		builder.Services.AddSingleton<IViewUsersUseCase, ViewUsersUseCase>();
+
 
 		return builder.Build();
 	}
