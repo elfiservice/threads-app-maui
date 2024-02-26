@@ -1,4 +1,3 @@
-using ThreadsApp.Helpers;
 using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 using ListView = Microsoft.Maui.Controls.ListView;

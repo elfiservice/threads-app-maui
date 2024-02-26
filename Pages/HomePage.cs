@@ -1,7 +1,6 @@
 namespace ThreadsApp.Pages;
 
 using ThreadsApp.Controls;
-using ThreadsApp.Helpers;
 using ThreadsApp.UseCases;
 
 // https://github.com/elfiservice/ThreadsApp-study/commit/0d9821a8eeb4f8b796e345cd2665ad643ea574ab
